@@ -1,44 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+ </head>          
 <body>
 
-<script>
-          var app = angular.module("mySongList", []); 
-          
-          app.controller("myCtrl", function($scope)
-           {
-               $scope.lists = ["Song1", "Song2", "Song3"];
-               $scope.addSong = function () 
-              {
-                $scope.error = "";
-
-                if (!$scope.addMe) 
-                  return;
-
-                if ($scope.lists.indexOf($scope.addMe) == -1)
-                {
-                   $scope.lists.push($scope.addMe);
-                }
-
-                else 
-                {
-                    $scope.error = "This song is already in your  list.";
-                }
-
-              }
-    
-                $scope.removeSong = function (x) 
-              {
-                  $scope.error = "";    
-                  $scope.lists.splice(x, 1);
-              }
-
-           }
-);
-</script>
-
+<
 <div ng-app="mySongList"  ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
   
   <header class="w3-container w3-light-blue w3-padding-16">
@@ -67,6 +35,8 @@
   
   </div>
 </div>
+   
+<script src="pro2.js"></script>       
 
 </body>
 </html>
